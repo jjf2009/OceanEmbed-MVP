@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: oceanembed
+Version: 0.1.0
+Summary: Satellite embedding-based subsurface ocean temperature reconstruction (MVP)
+Requires-Python: >=3.10
+Requires-Dist: torch
+Requires-Dist: xarray
+Requires-Dist: zarr
+Requires-Dist: dask
+Requires-Dist: netCDF4
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pyyaml
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: matplotlib
+Requires-Dist: copernicusmarine
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: httpx; extra == "dev"

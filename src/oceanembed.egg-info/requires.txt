@@ -1,0 +1,16 @@
+torch
+xarray
+zarr
+dask
+netCDF4
+numpy
+scipy
+pyyaml
+fastapi
+uvicorn
+matplotlib
+copernicusmarine
+
+[dev]
+pytest
+httpx

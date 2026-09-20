@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OceanEmbed</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>OceanEmbed</h1>
+  <p id="subtitle">Subsurface temperature reconstructed from surface fields &mdash; click the map.</p>
+</header>
+
+<div id="controls">
+  <label>Date <input type="range" id="dateSlider" min="0" max="0" value="0" /></label>
+  <span id="dateLabel">&mdash;</span>
+  <label>Field depth
+    <select id="depthSelect"></select>
+  </label>
+  <span id="banner"></span>
+</div>
+
+<main>
+  <div id="map"></div>
+  <div id="profile"></div>
+</main>
+
+<footer id="metrics">Loading&hellip;</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

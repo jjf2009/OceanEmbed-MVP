@@ -1,0 +1,45 @@
+# OceanEmbed MVP config -- Arabian Sea thin slice
+name: mvp
+
+region:
+  lon_min: 60.0
+  lon_max: 75.0
+  lat_min: 10.0
+  lat_max: 20.0
+  resolution: 0.25
+
+time:
+  start: "2021-01-01"
+  end: "2022-12-31"
+  # time-blocked split (no random pixel split -- neighbours leak)
+  train_end: "2021-12-31"
+  val_end: "2022-06-30"
+
+source:
+  dataset_id: "cmems_mod_glo_phy_my_0.083deg_P1D-m"
+  surface_vars: ["thetao", "zos", "so"]
+  target_var: "thetao"
+
+depths: [0, 10, 20, 30, 50, 75, 100, 125, 150, 200, 300, 400, 500, 700, 1000]
+
+paths:
+  raw_dir: "data/raw"
+  processed: "data/processed/mvp.zarr"
+  norm_stats: "data/processed/norm_stats.json"
+  checkpoint: "checkpoints/mvp.pt"
+  reports_dir: "reports"
+
+model:
+  embedding_dim: 64
+  encoder_hidden: [128, 128]
+  decoder_hidden: [128]
+  dropout: 0.1
+
+train:
+  epochs: 30
+  batch_size: 4096
+  lr: 0.001
+  weight_decay: 0.0001
+  patience: 5
+  seed: 42
+  max_train_samples: 1500000
