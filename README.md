@@ -120,4 +120,4 @@ Named deliberately, and mapped onto the synopsis's own reading-priority list:
 - **Independent validation** — EN4 / IAP / Ishii / ARGO, rather than scoring GLORYS against itself.
 - **Full North Indian Ocean box**, salinity output, and the adaptive spatiotemporal clustering trick
   (reported 12–27% RMSE gains, cheap to add).
-# SIH26066_Protoype_Demo
+
